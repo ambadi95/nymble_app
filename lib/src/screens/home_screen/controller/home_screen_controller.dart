@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:nymble_app/src/themes/themes_services.dart';
 import '../model/model_class.dart';
 
 class HomeScreenController extends GetxController {

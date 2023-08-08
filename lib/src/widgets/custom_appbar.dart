@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:nymble_app/src/themes/themes_services.dart';
 
 
