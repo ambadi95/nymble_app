@@ -19,22 +19,26 @@ class CircularCard extends StatelessWidget {
       child: Column(
         children: [
           Container(
-              height: 100,
-              width: 100,
+              height: 120,
+              width: 120,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(borderRadius!),
               ),
               child: Center(
-                  child: Image.network(image!, errorBuilder:
-                      (BuildContext context, Object exception,
-                          StackTrace? stackTrace) {
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(borderRadius!),
+                    child: Image.network(image!,
+                        errorBuilder:
+                        (BuildContext context, Object exception,
+                            StackTrace? stackTrace) {
                 return const Center(
-                    child: Icon(
-                  Icons.close,
-                  size: 40,
+                      child: Icon(
+                    Icons.close,
+                    size: 40,
                 ));
-              }))),
+              }),
+                  ))),
           const SizedBox(
             height: 10,
           ),

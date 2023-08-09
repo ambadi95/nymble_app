@@ -8,7 +8,7 @@
       "title": "Banner",
       "items": [
         {
-          "image": "https://fastly.picsum.photos/id/315/200/300.jpg?hmac=C67WPcnxkaV_SPowHi-8nl3yoODZSBZqnoOdBObP5Ys",
+          "image": "https://i.ibb.co/FmJ68Sg/banner2.jpg",
           "header_text": "New Recipe",
           "footer_text": "Cook Chicken Curry",
           "footer_icon": true,
@@ -24,6 +24,7 @@
         },
         {
           "type": "banner",
+          "image": "https://i.ibb.co/M9r2YmW/6.png",
           "color": "#bfeb99",
           "header_text": "Ultimate Meal",
           "footer_text": "Plan your ultimate meals",
@@ -44,22 +45,22 @@
         {
           "type":"circular_item",
           "text":"Breakfast",
-          "image":"https://yetlosocial.yetloapps.com/storage/assets/images/postercategories/Birthday/Wishes/ZX8dy0k8yetbzbQ6nY7HWwQyUeD7QA4NV9Nq85n2.png"
+          "image":"https://i.ibb.co/fnH0wsx/1.png"
         },
         {
           "type":"circular_item",
           "text":"Meat Based",
-          "image":"https://yetlosocial.yetloapps.com/storage/assets/images/postercategories/Birthday/Wishes/ZX8dy0k8yetbzbQ6nY7HWwQyUeD7QA4NV9Nq85n2.png"
+          "image":"https://i.ibb.co/PsLNZx3/3.webp"
         },
         {
           "type":"circular_item",
           "text":"Vegan",
-          "image":"https://path/to/image.png"
+          "image":"https://i.ibb.co/MPdbsxp/5.png"
         },
         {
           "type":"circular_item",
           "text":"Non Veg",
-          "image":"https://path/to/image.png"
+          "image":"https://i.ibb.co/cy4JWTt/6.jpg"
         }
       ]
     },
@@ -70,22 +71,22 @@
         {
           "type":"box_item",
           "text":"American",
-          "image":"https://path/to/image.png"
+          "image":"https://i.ibb.co/MPdbsxp/5.png"
         },
         {
           "type":"box_item",
           "text":"Italian",
-          "image":"https://path/to/image.png"
+          "image":"https://i.ibb.co/PsLNZx3/3.webp"
         },
         {
           "type":"box_item",
           "text":"Thai",
-          "image":"https://yetlosocial.yetloapps.com/storage/assets/images/postercategories/Birthday/Wishes/ZX8dy0k8yetbzbQ6nY7HWwQyUeD7QA4NV9Nq85n2.png"
+          "image":"https://i.ibb.co/fnH0wsx/1.png"
         },
         {
           "type":"box_item",
           "text":"Thai",
-          "image":"https://yetlosocial.yetloapps.com/storage/assets/images/postercategories/Birthday/Wishes/ZX8dy0k8yetbzbQ6nY7HWwQyUeD7QA4NV9Nq85n2.png"
+          "image":"https://i.ibb.co/MPdbsxp/5.png"
         }
       ]
     },
@@ -96,24 +97,24 @@
         {
           "type":"circular_item",
           "text":"Coffe",
-          "image":"https://path/to/image.png"
+          "image":"https://i.ibb.co/YNSywT1/7.png"
 
         },
         {
           "type":"box_item",
           "text":"Cold Coffee",
-          "image":"https://path/to/image.png"
+          "image":"https://i.ibb.co/YNSywT1/7.png"
 
         },
         {
           "type":"box_item",
           "text":"Shakes",
-          "image":"https://yetlosocial.yetloapps.com/storage/assets/images/postercategories/Birthday/Wishes/ZX8dy0k8yetbzbQ6nY7HWwQyUeD7QA4NV9Nq85n2.png"
+          "image":"https://i.ibb.co/YNSywT1/7.png"
         },
         {
           "type":"circular_item",
           "text":"Juices",
-          "image":"https://yetlosocial.yetloapps.com/storage/assets/images/postercategories/Birthday/Wishes/ZX8dy0k8yetbzbQ6nY7HWwQyUeD7QA4NV9Nq85n2.png"
+          "image":"https://i.ibb.co/YNSywT1/7.png"
         }
       ]
     }
