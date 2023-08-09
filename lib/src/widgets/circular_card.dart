@@ -3,16 +3,19 @@ import 'package:flutter/material.dart';
 class CircularCard extends StatelessWidget {
   final String label;
   final String? image;
-  const CircularCard({
-    super.key,
-    required this.label,
-    this.image = 'http',
-  });
+  final double? padding;
+  final double? borderRadius;
+  const CircularCard(
+      {super.key,
+      required this.label,
+      this.image = 'http',
+      this.borderRadius,
+      this.padding});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: EdgeInsets.all(padding!),
       child: Column(
         children: [
           Container(
@@ -20,7 +23,7 @@ class CircularCard extends StatelessWidget {
               width: 100,
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(100),
+                borderRadius: BorderRadius.circular(borderRadius!),
               ),
               child: Center(
                   child: Image.network(image!, errorBuilder:
@@ -37,13 +40,16 @@ class CircularCard extends StatelessWidget {
           ),
           Center(
               child: SizedBox(
-                width: 100,
-                child: Text(
-            label,
-            textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold,),
-          ),
-              )),
+            width: 100,
+            child: Text(
+              label,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          )),
         ],
       ),
     );

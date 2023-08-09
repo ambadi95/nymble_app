@@ -3,22 +3,24 @@ import 'package:flutter/material.dart';
 class SquareCard extends StatelessWidget {
   final String label;
   final String? image;
-
-  const SquareCard({
-    super.key,
-    required this.label,
-    this.image = 'http',
-  });
+  final double? padding;
+  final double? borderRadius;
+  const SquareCard(
+      {super.key,
+      required this.label,
+      this.image = 'http',
+      this.borderRadius,
+      this.padding});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: EdgeInsets.all(padding!),
       child: Container(
           width: 100,
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(borderRadius!),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -27,8 +29,7 @@ class SquareCard extends StatelessWidget {
               SizedBox(
                 height: 75,
                 child: Center(
-                    child: Image.network(image!,
-                        errorBuilder:
+                    child: Image.network(image!, errorBuilder:
                         (BuildContext context, Object exception,
                             StackTrace? stackTrace) {
                   return const Center(

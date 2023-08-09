@@ -64,6 +64,7 @@ class _CarousalSliderState extends State<CarousalSlider> {
   void dispose() {
     // TODO: implement dispose
     pageController.dispose();
+    carousalTimer?.cancel();
     super.dispose();
   }
 
@@ -100,6 +101,8 @@ class _CarousalSliderState extends State<CarousalSlider> {
                         color: widget.items[index].color != null
                             ? widget.items[index].color!
                             : "",
+                        padding:  widget.items[index].padding ?? 10.00,
+                        borderRadius: widget.items[index].borderRadius ?? 15.00,
                       ),
                       onPanDown: (d) {
                         carousalTimer?.cancel();

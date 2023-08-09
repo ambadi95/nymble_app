@@ -11,7 +11,9 @@
           "image": "https://fastly.picsum.photos/id/315/200/300.jpg?hmac=C67WPcnxkaV_SPowHi-8nl3yoODZSBZqnoOdBObP5Ys",
           "header_text": "New Recipe",
           "footer_text": "Cook Chicken Curry",
-          "footer_icon": true
+          "footer_icon": true,
+          "padding" : 10.00,
+          "borderRadius" : 15.00
         },
         {
           "type": "banner",
@@ -95,11 +97,13 @@
           "type":"circular_item",
           "text":"Coffe",
           "image":"https://path/to/image.png"
+
         },
         {
           "type":"box_item",
           "text":"Cold Coffee",
           "image":"https://path/to/image.png"
+
         },
         {
           "type":"box_item",

@@ -21,8 +21,7 @@ class _HomeScreenViewState extends State<HomeScreenView> {
         didChangeDependencies: (con) async {
           await con.controller!.loadData();
         },
-        builder: (controller) =>
-            Scaffold(
+        builder: (controller) => Scaffold(
               bottomNavigationBar: Container(
                 height: 50,
                 decoration: const BoxDecoration(
@@ -41,22 +40,29 @@ class _HomeScreenViewState extends State<HomeScreenView> {
               appBar: const CustomAppBar(
                 label: 'Welcome onBoard',
               ),
-              body: controller.responseData == null ? const Center(child: CircularProgressIndicator()): SingleChildScrollView(
-                child: ListView.builder(
-                    physics: const NeverScrollableScrollPhysics(),
-                    shrinkWrap: true,
-                    itemCount: controller.responseData!.widgets!.length,
-                    itemBuilder: (_, index) {
-                      return controller.responseData!.widgets![index].type ==
-                              'banner'
-                          ? _carousalView(controller,
-                              controller.responseData!.widgets![index].items)
-                          : _horizontalCardView(
-                              controller,
-                              controller.responseData!.widgets![index].title,
-                              controller.responseData!.widgets![index].items);
-                    }),
-              ),
+              body: controller.responseData == null
+                  ? const Center(child: CircularProgressIndicator())
+                  : SingleChildScrollView(
+                      child: ListView.builder(
+                          physics: const NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
+                          itemCount: controller.responseData!.widgets!.length,
+                          itemBuilder: (_, index) {
+                            return controller
+                                        .responseData!.widgets![index].type ==
+                                    'banner'
+                                ? _carousalView(
+                                    controller,
+                                    controller
+                                        .responseData!.widgets![index].items)
+                                : _horizontalCardView(
+                                    controller,
+                                    controller
+                                        .responseData!.widgets![index].title,
+                                    controller
+                                        .responseData!.widgets![index].items);
+                          }),
+                    ),
             ));
   }
 
@@ -104,11 +110,15 @@ class _HomeScreenViewState extends State<HomeScreenView> {
                         key: const Key("squareCardWidget"),
                         label: item[index].text!,
                         image: item[index].image ?? "",
+                        padding: item[index].padding ?? 12.00,
+                        borderRadius: item[index].borderRadius ?? 10,
                       )
                     : CircularCard(
                         key: const Key("circularCard"),
                         label: item[index].text!,
                         image: item[index].image ?? "",
+                        padding: item[index].padding ?? 12.00,
+                        borderRadius: item[index].borderRadius ?? 100,
                       );
               }),
         ),

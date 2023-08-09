@@ -7,18 +7,23 @@ class CarousalCard extends StatelessWidget {
   final bool isFooterIconVisible;
   final String image;
   final String color;
+  final double? borderRadius;
+  final double? padding;
   const CarousalCard(
       {super.key,
       this.header = "Header",
       this.footer = "Footer",
       this.isFooterIconVisible = true,
       this.image = 'http',
-      this.color = '0FF'});
+      this.color = '0FF',
+        this.borderRadius ,
+        this.padding
+      });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10.0),
+      padding: EdgeInsets.all(padding!),
       child: Container(
         height: 150,
         width: double.infinity,
@@ -92,12 +97,12 @@ class CarousalCard extends StatelessWidget {
           image: NetworkImage(image),
           fit: BoxFit.fill,
         ),
-          borderRadius: BorderRadius.circular(15)
+          borderRadius: BorderRadius.circular(borderRadius!)
       );
     } else {
       return BoxDecoration(
         color: color != "" ? color.toColor() : Colors.grey,
-        borderRadius: BorderRadius.circular(15)
+        borderRadius: BorderRadius.circular(borderRadius!)
       );
     }
   }

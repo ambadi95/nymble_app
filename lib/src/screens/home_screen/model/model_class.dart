@@ -74,6 +74,8 @@ class Item {
   final String? footerText;
   final bool? footerIcon;
   final String? type;
+  final double? padding;
+  final double? borderRadius;
   final String? color;
   final String? text;
 
@@ -83,6 +85,8 @@ class Item {
     this.footerText,
     this.footerIcon,
     this.type,
+    this.padding,
+    this.borderRadius,
     this.color,
     this.text,
   });
@@ -93,6 +97,8 @@ class Item {
     footerText: json["footer_text"],
     footerIcon: json["footer_icon"],
     type: json["type"],
+    borderRadius: json["borderRadius"]?.toDouble(),
+    padding: json["padding"]?.toDouble(),
     color: json["color"],
     text: json["text"],
   );
@@ -103,6 +109,8 @@ class Item {
     "footer_text": footerText,
     "footer_icon": footerIcon,
     "type": type,
+    "borderRadius" : borderRadius,
+    "padding" : padding,
     "color": color,
     "text": text,
   };
