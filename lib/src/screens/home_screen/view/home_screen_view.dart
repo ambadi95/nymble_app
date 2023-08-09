@@ -18,6 +18,7 @@ class _HomeScreenViewState extends State<HomeScreenView> {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomeScreenController>(
+      init: HomeScreenController(),
         didChangeDependencies: (con) async {
           await con.controller!.loadData();
         },
@@ -43,7 +44,7 @@ class _HomeScreenViewState extends State<HomeScreenView> {
                     itemBuilder: (_, index) {
                       return controller.responseData!.widgets![index].title ==
                               'Banner'
-                          ? _carousalArea(controller)
+                          ? _carousalArea(controller, controller.responseData!.widgets![index].items)
                           : _horizontalCardView(
                               controller,
                               controller.responseData!.widgets![index].title,
@@ -59,13 +60,13 @@ class _HomeScreenViewState extends State<HomeScreenView> {
     );
   }
 
-  Widget _carousalArea(HomeScreenController controller) {
+  Widget _carousalArea(HomeScreenController controller,List<data.Item>? item) {
     return Column(
       children: [
         CarousalSlider(
           key: const Key("carousalWidget"),
-          itemCount: controller.itemsBanner!.length,
-          items: controller.itemsBanner!,
+          itemCount: item!.length,
+          items: item,
         ),
         _height(20)
       ],
