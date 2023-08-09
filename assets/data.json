@@ -45,7 +45,7 @@
         {
           "type":"circular_item",
           "text":"Breakfast",
-          "image":"https://i.ibb.co/fnH0wsx/1.png"
+          "image":"https://i.ibb.co/cy2sNLZ/breakfast.jpg"
         },
         {
           "type":"circular_item",
@@ -55,12 +55,12 @@
         {
           "type":"circular_item",
           "text":"Vegan",
-          "image":"https://i.ibb.co/MPdbsxp/5.png"
+          "image":"https://i.ibb.co/prkwGtG/vegan.jpg"
         },
         {
           "type":"circular_item",
           "text":"Non Veg",
-          "image":"https://i.ibb.co/cy4JWTt/6.jpg"
+          "image":"https://i.ibb.co/s605L1r/no-veg.webp"
         }
       ]
     },
@@ -71,22 +71,22 @@
         {
           "type":"box_item",
           "text":"American",
-          "image":"https://i.ibb.co/MPdbsxp/5.png"
+          "image":"https://i.ibb.co/qpWFXqF/american.jpg"
         },
         {
           "type":"box_item",
           "text":"Italian",
-          "image":"https://i.ibb.co/PsLNZx3/3.webp"
+          "image":"https://i.ibb.co/hCqB1vc/italian.jpg"
         },
         {
           "type":"box_item",
           "text":"Thai",
-          "image":"https://i.ibb.co/fnH0wsx/1.png"
+          "image":"https://i.ibb.co/SBqhXt7/thai.webp"
         },
         {
           "type":"box_item",
-          "text":"Thai",
-          "image":"https://i.ibb.co/MPdbsxp/5.png"
+          "text":"Chinese",
+          "image":"https://i.ibb.co/vCNxzPj/chinees.jpg"
         }
       ]
     },
@@ -96,25 +96,25 @@
       "items":[
         {
           "type":"circular_item",
-          "text":"Coffe",
-          "image":"https://i.ibb.co/YNSywT1/7.png"
+          "text":"Coffee",
+          "image":"https://i.ibb.co/BGtcGHk/Coffee.webp"
 
         },
         {
           "type":"box_item",
           "text":"Cold Coffee",
-          "image":"https://i.ibb.co/YNSywT1/7.png"
+          "image":"https://i.ibb.co/S31Dr15/coldcoffee.jpg"
 
         },
         {
           "type":"box_item",
           "text":"Shakes",
-          "image":"https://i.ibb.co/YNSywT1/7.png"
+          "image":"https://i.ibb.co/5TvmNKZ/milkshake.jpg"
         },
         {
           "type":"circular_item",
           "text":"Juices",
-          "image":"https://i.ibb.co/YNSywT1/7.png"
+          "image":"https://i.ibb.co/JQ7dt64/juices.webp"
         }
       ]
     }

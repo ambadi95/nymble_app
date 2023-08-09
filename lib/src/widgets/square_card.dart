@@ -27,20 +27,24 @@ class SquareCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                height: 75,
+                height: 80,
                 child: Center(
-                    child: Image.network(image!, errorBuilder:
-                        (BuildContext context, Object exception,
-                            StackTrace? stackTrace) {
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(borderRadius!),
+                      child: Image.network(image!,
+                          errorBuilder:
+                          (BuildContext context, Object exception,
+                              StackTrace? stackTrace) {
                   return const Center(
-                      child: Icon(
-                    Icons.close,
-                    size: 40,
+                        child: Icon(
+                      Icons.close,
+                      size: 40,
                   ));
-                })),
+                }),
+                    )),
               ),
               const SizedBox(
-                height: 20,
+                height: 15,
               ),
               Center(
                   child: Text(

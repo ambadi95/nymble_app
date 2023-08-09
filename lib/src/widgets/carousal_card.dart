@@ -36,7 +36,7 @@ class CarousalCard extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: Colors.black26.withOpacity(0.1),
+                  color: Colors.black26.withOpacity(0.5),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -53,7 +53,7 @@ class CarousalCard extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: Colors.black26.withOpacity(0.1),
+                  color: Colors.black26.withOpacity(0.4),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -95,7 +95,7 @@ class CarousalCard extends StatelessWidget {
       return BoxDecoration(
         image: DecorationImage(
           image: NetworkImage(image),
-          fit: BoxFit.fill,
+          fit: BoxFit.cover,
         ),
           borderRadius: BorderRadius.circular(borderRadius!)
       );
