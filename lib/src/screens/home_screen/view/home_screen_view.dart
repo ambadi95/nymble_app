@@ -18,33 +18,39 @@ class _HomeScreenViewState extends State<HomeScreenView> {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomeScreenController>(
-      init: HomeScreenController(),
         didChangeDependencies: (con) async {
           await con.controller!.loadData();
         },
-        builder: (controller) => Scaffold(
-          bottomNavigationBar: Container(
-            height: 50,
-            decoration: const BoxDecoration(
-              color:  Colors.blueGrey,
-              borderRadius: BorderRadius.only(topLeft: Radius.circular(50), topRight: Radius.circular(50))
-            ),
-            child: const Center(
-              child: Icon(Icons.home_filled, size: 30,color: Colors.white,),
-            ),
-          ),
+        builder: (controller) =>
+            Scaffold(
+              bottomNavigationBar: Container(
+                height: 50,
+                decoration: const BoxDecoration(
+                    color: Colors.blueGrey,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(50),
+                        topRight: Radius.circular(50))),
+                child: const Center(
+                  child: Icon(
+                    Icons.home_filled,
+                    size: 30,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
               appBar: const CustomAppBar(
                 label: 'Welcome onBoard',
               ),
-              body: SingleChildScrollView(
+              body: controller.responseData == null ? const Center(child: CircularProgressIndicator()): SingleChildScrollView(
                 child: ListView.builder(
                     physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     itemCount: controller.responseData!.widgets!.length,
                     itemBuilder: (_, index) {
-                      return controller.responseData!.widgets![index].title ==
-                              'Banner'
-                          ? _carousalArea(controller, controller.responseData!.widgets![index].items)
+                      return controller.responseData!.widgets![index].type ==
+                              'banner'
+                          ? _carousalView(controller,
+                              controller.responseData!.widgets![index].items)
                           : _horizontalCardView(
                               controller,
                               controller.responseData!.widgets![index].title,
@@ -60,7 +66,7 @@ class _HomeScreenViewState extends State<HomeScreenView> {
     );
   }
 
-  Widget _carousalArea(HomeScreenController controller,List<data.Item>? item) {
+  Widget _carousalView(HomeScreenController controller, List<data.Item>? item) {
     return Column(
       children: [
         CarousalSlider(

@@ -36,10 +36,14 @@ class CircularCard extends StatelessWidget {
             height: 10,
           ),
           Center(
-              child: Text(
+              child: SizedBox(
+                width: 100,
+                child: Text(
             label,
-            style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-          )),
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold,),
+          ),
+              )),
         ],
       ),
     );

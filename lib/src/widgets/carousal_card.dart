@@ -58,6 +58,7 @@ class CarousalCard extends StatelessWidget {
                     children: [
                       Text(
                         footer,
+                        maxLines: 2,
                         style: const TextStyle(
                             color: Colors.white,
                             fontSize: 14,
